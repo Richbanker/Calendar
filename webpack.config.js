@@ -36,5 +36,8 @@ module.exports = {
     static: './dist',
     hot: true,
     port: 8080
+  },
+  stats: {
+    errorDetails: true
   }
 };

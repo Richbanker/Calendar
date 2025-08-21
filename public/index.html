@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Calendar Component</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Тестовое задание - Календарь - Рабочие Руки - Илья </h1>
+        <Calendar 
+            :nachalnayaData="'2024-01-15'"
+            @vybrannaya-data="handleDateSelect"
+        />
+        <div v-if="selectedDate" style="margin-top: 20px; padding: 10px; background: #f0f0f0; border-radius: 4px;">
+            <strong>Выбранная дата:</strong> {{ selectedDate }}
+        </div>
+    </div>
+</body>
+</html>

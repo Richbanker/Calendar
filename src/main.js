@@ -1,10 +1,18 @@
 import Vue from 'vue'
 import Calendar from './Calendar.vue'
+
+// Регистрируем компонент глобально
 Vue.component('Calendar', Calendar)
-new Vue({
+
+// Создаем экземпляр Vue
+const app = new Vue({
   el: '#app',
   data: {
     selectedDate: null
+  },
+  mounted() {
+    console.log('Vue app mounted successfully')
+    console.log('Calendar component:', Calendar)
   },
   methods: {
     handleDateSelect(date) {
@@ -22,3 +30,6 @@ new Vue({
     }
   }
 })
+
+// Проверяем, что Vue инициализировался
+console.log('Vue app created:', app)

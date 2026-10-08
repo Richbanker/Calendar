@@ -1,9 +1,9 @@
 <template>
   <div class="kalendar">
     <div class="zagolovok">
-      <button @click="pred_mes" class="knopka">&lt;</button>
+      <button type="button" @click="pred_mes" class="knopka" :aria-label="yazik === 'ru' ? 'Предыдущий месяц' : 'Previous month'">&lt;</button>
       <span class="mes_god">{{ tekushiy_mes }} {{ tekushiy_god }}</span>
-      <button @click="sled_mes" class="knopka">&gt;</button>
+      <button type="button" @click="sled_mes" class="knopka" :aria-label="yazik === 'ru' ? 'Следующий месяц' : 'Next month'">&gt;</button>
     </div> 
     <div class="dni_nedeli">
       <span v-for="den in dni_nedeli" :key="den" class="den_nedeli">{{ den }}</span>

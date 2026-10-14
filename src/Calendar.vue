@@ -81,7 +81,7 @@ export default {
       const setka = []
       
       for (let i = pervый_день_nedeli - 1; i >= 0; i--) {
-        const data = new Date(this.tekushiy_data.getFullYear(), this.tekushiy_data.getMonth() - 1, 0)
+        const data = new Date(this.tekushiy_data.getFullYear(), this.tekushiy_data.getMonth(), 0)
         const chislo = data.getDate() - i
         setka.push({
           key: `prev-${chislo}`,

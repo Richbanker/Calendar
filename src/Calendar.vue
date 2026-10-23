@@ -2,7 +2,7 @@
   <div class="kalendar">
     <div class="zagolovok">
       <button @click="pred_mes" class="knopka">&lt;</button>
-      <span class="mes_god">{{ tekushiy_mes }} {{ tekushiy_god }}</span>
+      <span class="mes_god" aria-live="polite" aria-atomic="true">{{ tekushiy_mes }} {{ tekushiy_god }}</span>
       <button @click="sled_mes" class="knopka">&gt;</button>
     </div> 
     <div class="dni_nedeli">

@@ -25,8 +25,8 @@
     </div>
     
     <div class="yazik">
-      <button @click="smенить_язык('ru')" :class="{ aktivniy: yazik === 'ru' }">RU</button>
-      <button @click="smенить_язык('en')" :class="{ aktivniy: yazik === 'en' }">EN</button>
+      <button type="button" @click="smенить_язык('ru')" :class="{ aktivniy: yazik === 'ru' }">RU</button>
+      <button type="button" @click="smенить_язык('en')" :class="{ aktivniy: yazik === 'en' }">EN</button>
     </div>
   </div>
 </template>

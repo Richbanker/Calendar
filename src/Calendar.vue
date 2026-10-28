@@ -128,7 +128,7 @@ export default {
   methods: {
     ustanovit_nachalnuyu_datу() {
       const [god, mes, den] = this.nachalnayaData.split('-')
-      this.tekushiy_data = new Date(parseInt(god), parseInt(mes) - 1, parseInt(den))
+      this.tekushiy_data = new Date(parseInt(god, 10), parseInt(mes, 10) - 1, parseInt(den, 10))
     },
     pred_mes() {
       this.tekushiy_data = new Date(this.tekushiy_data.getFullYear(), this.tekushiy_data.getMonth() - 1, 1)

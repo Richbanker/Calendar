@@ -2,7 +2,7 @@
   <div class="kalendar">
     <div class="zagolovok">
       <button @click="pred_mes" class="knopka">&lt;</button>
-      <span class="mes_god">{{ tekushiy_mes }} {{ tekushiy_god }}</span>
+      <h2 class="mes_god">{{ tekushiy_mes }} {{ tekushiy_god }}</h2>
       <button @click="sled_mes" class="knopka">&gt;</button>
     </div> 
     <div class="dni_nedeli">
@@ -193,6 +193,7 @@ export default {
   background: #e0e0e0;
 }
 .mes_god {
+  margin: 0;
   font-size: 18px;
   font-weight: bold;
 }

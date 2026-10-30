@@ -192,6 +192,11 @@ export default {
 .knopka:hover {
   background: #e0e0e0;
 }
+
+.knopka:focus-visible {
+  outline: 2px solid #0056b3;
+  outline-offset: 2px;
+}
 .mes_god {
   font-size: 18px;
   font-weight: bold;

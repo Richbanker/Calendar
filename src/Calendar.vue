@@ -10,9 +10,13 @@
     </div>
     
     <div class="setka_dney">
-      <div 
+      <button
         v-for="den in setka" 
         :key="den.key"
+        type="button"
+        :disabled="den.drugoy_mes"
+        :aria-label="format_data(den.data)"
+        :aria-pressed="den.aktivniy"
         @click="vybrat_den(den)"
         :class="['den_kalendarya', { 
           'drugoy_mes': den.drugoy_mes,
@@ -21,7 +25,7 @@
         }]"
       >
         {{ den.chislo }}
-      </div>
+      </button>
     </div>
     
     <div class="yazik">
@@ -215,6 +219,9 @@ export default {
   margin-bottom: 20px;
 }
 .den_kalendarya {
+  border: 0;
+  background: transparent;
+  font: inherit;
   text-align: center;
   padding: 8px 4px;
   cursor: pointer;
@@ -223,6 +230,10 @@ export default {
 }
 .den_kalendarya:hover:not(.drugoy_mes) {
   background: #f5f5f5;
+}
+.den_kalendarya:focus-visible {
+  outline: 2px solid #0056b3;
+  outline-offset: 2px;
 }
 .drugoy_mes {
   color: #ccc;
